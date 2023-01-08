@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c125b5b14848fa34ba6a47bc784013c1, type: 3}
+  m_Name: RandomTweets
+  m_EditorClassIdentifier: 
+  tweets:
+  - 'guys it happened im in a toy store w adult money
+
+'
+  - 'I want spaghetti and Texas toast
+
+'
+  - 'The Intell**ision Am**o story is so ludicrous that T***y Tal***ico getting sued
+    by an office equipment financing company wouldn''t make a "Top 10 Insane Am**o
+    Moments" list.
+
+'
+  - 'today is the game awards, shout out to t***y tal***co who invented videogames
+
+'
+  - 'yeah sex is whatever but have you ever fallen asleep next to your sweet partner
+    while listening to a video together of a british man having a mental breakdown
+    while hysterically ranting for 2 hours about how much of an asshole t****y ta***rico
+    is
+
+'
+  - "2023 is going to be VERY GOOD for:\r\n Virgo  Cancer \r\nScorpio   Pisces  \r\n
+    RT to Claim! \r\n"

@@ -10,6 +10,8 @@ public class ClockTimer : Singleton<ClockTimer>
     protected float timeMultiplier = 2;
     protected TextMeshProUGUI text; 
 
+
+    public float TimeMultiplier => timeMultiplier;
     void Start()
     {
         text = this.GetComponentInChildren<TextMeshProUGUI>(); 
