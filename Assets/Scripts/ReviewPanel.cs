@@ -5,7 +5,7 @@ using TMPro;
 public class ReviewPanel : Singleton<ReviewPanel>
 {
     [SerializeField]
-    protected TextMeshProUGUI reportedPostsNumber, correctlyReportedNumber, wrongReportedNumber, extraHoursNumber, evaluationText;
+    protected TextMeshProUGUI reportedPostsNumber, correctlyReportedNumber, wrongReportedNumber, extraHoursNumber, evaluationText, endProbationText;
 
 
 
@@ -19,6 +19,11 @@ public class ReviewPanel : Singleton<ReviewPanel>
         {
             evaluationText.color = Color.red;
             evaluationText.text = "..."; 
+        }
+
+        if (GameController.Instance.dayIndex == 5)
+        {
+            endProbationText.gameObject.SetActive(true); 
         }
     }
     void Start()

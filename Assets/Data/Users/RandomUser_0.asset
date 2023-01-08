@@ -16,6 +16,10 @@ MonoBehaviour:
   avatar: {fileID: 21300000, guid: 20650256a7470e943aca2fa5d1dda988, type: 3}
   username: RandGuy
   handle: randeris
-  possibleTweets: []
+  possibleRandomTweets: []
+  goodStoryLineTweets: []
+  badStoryLineTweets: []
   concreteFlaggedWords: []
-  tweetsPerDay: 4
+  canUseRandomGeneralTweets: 1
+  isCeo: 0
+  tweetsPerDay: 2

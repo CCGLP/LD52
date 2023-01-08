@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
 using System.Text.RegularExpressions;
-
+using UnityEngine.SceneManagement;
 
 public class GameController : Singleton<GameController>
 {
@@ -41,12 +41,18 @@ public class GameController : Singleton<GameController>
     protected PoolManager<Tweet> tweetPool;
 
     protected List<Tweet> activeTweets;
-    protected List<Tweet> reportedTweets; 
+    protected List<Tweet> reportedTweets;
 
-    protected int dayIndex = -1; 
+    protected List<CoworkerContent> coworkerContents;
+
+    public int dayIndex = -1;
+    protected bool isGameEnd = false;
+
+    public bool CanUseTimer => !interludeCg.interactable;
 
     void Start()
     {
+        coworkerContents = new List<CoworkerContent>(GameObject.FindObjectsOfType<CoworkerContent>()); 
         activeTweets = new List<Tweet>();
         reportedTweets = new List<Tweet>(); 
         tweetPool = new PoolManager<Tweet>();
@@ -79,16 +85,30 @@ public class GameController : Singleton<GameController>
         int goodReports = 0;
         int badReports = 0; 
 
-        bool isGameEnd = false;
+        isGameEnd = false;
 
         for (int i = 0; i< reportedTweets.Count; i++)
         {
             bool correct = reportedTweets[i].CorrectlyReported(generalBannedWords);
-            if (correct) goodReports++;
+            if (correct)
+            {
+                reportedTweets[i].user.isCoworker = false;
+                foreach(CoworkerContent coworker in coworkerContents)
+                {
+                    if (coworker.coworkerhandle == reportedTweets[i].user.handle)
+                    {
+                        coworker.ActiveFireCoworker(); 
+                    }
+                }
+                goodReports++;
+            }
             else badReports++; 
         }
 
-        if (goodReports < badReports)
+
+        int evaluation = goodReports - badReports + extraHoursBonus;
+        Debug.Log("Evaluation: " + evaluation.ToString()); 
+        if (evaluation <= 0 || dayIndex == 5)
         {
             isGameEnd = true; 
         }
@@ -98,6 +118,11 @@ public class GameController : Singleton<GameController>
     }
     private void GameStartRoutine()
     {
+        if (isGameEnd)
+        {
+            SceneManager.LoadScene(2); 
+            return;
+        }
         dayIndex++;
         reportedTweets.Clear(); 
         CleanPreviousDaysTweets();
@@ -190,6 +215,10 @@ public class GameController : Singleton<GameController>
 
 
         }
+
+        tweetContainer.sizeDelta = new Vector2(tweetContainer.sizeDelta.x, 135 * activeTweets.Count);
+        tweetContainer.anchoredPosition = new Vector2(tweetContainer.anchoredPosition.x, 0);
+
     }
 
     private void CleanPreviousDaysTweets()
@@ -204,11 +233,22 @@ public class GameController : Singleton<GameController>
     public void FilterTweetsByInputString()
     {
         if (searchInputField.text.Length > 0) {
-            Regex regex = new Regex(searchInputField.text); 
+
+            string[] splitWords = searchInputField.text.Split(' ');
             for (int i = 0; i < activeTweets.Count; i++)
             {
-                activeTweets[i].FilterByText(regex); 
+                bool isMatch = false;
+
+
+                for (int j = 0; j < splitWords.Length; j++)
+                {
+                    Regex regex = new Regex(splitWords[j], RegexOptions.IgnoreCase);
+                    isMatch = regex.IsMatch(activeTweets[i].searchableText);
+                    if (!isMatch) break;
+                }
+                activeTweets[i].gameObject.SetActive(isMatch); 
             }
+           
         }
         else
         {
@@ -217,6 +257,8 @@ public class GameController : Singleton<GameController>
                 activeTweets[i].gameObject.SetActive(true); 
             }
         }
+
+        tweetContainer.anchoredPosition = new Vector2(tweetContainer.anchoredPosition.x, 0); 
     }
     public void ShowCanvasGroup(CanvasGroup cg)
     {

@@ -19,9 +19,44 @@ MonoBehaviour:
   possibleRandomTweets: []
   goodStoryLineTweets:
   - list:
-    - I hate my coworker soooooooooooo much
-  badStoryLineTweets: []
-  concreteFlaggedWords: []
+    - I can't stand my co-worker Katie anymore, every day she greets me with a smile
+      as if we were friends.
+  - list:
+    - Another day they haven't cleaned the office when I get to work, I'm surrounded
+      by useless people, really.
+  - list:
+    - In the project I am currently working on, I keep getting more and more work
+      because my colleagues do absolutely nothing to help me, I am fed up.
+  - list:
+    - My colleagues have started talking about joining a union but I understand that
+      they are setting it up to get us all fired, otherwise I don't understand it.
+  - list:
+    - I still don't understand why everyone insists on how bad the boss is for firing
+      all those slackers, they must have done something wrong, damn it!
+  - list:
+    - I haven't had any problems with the HR department for 6 months now, I understand
+      that they hired competent people at last.
+  badStoryLineTweets:
+  - list: []
+  - list:
+    - Well, back home
+  - list:
+    - Today I'm meeting my high school friends, let's see how life went for them.
+  - list:
+    - I joined a neighborhood support association in my childhood town, it wasn't
+      so bad for me to lose that job.
+  - list:
+    - Today, after a long time, I talked to my parents again, they are encouraging
+      me a lot, I am very happy.
+  - list:
+    - I have found a job in my city! I can be with my lifelong friends and with my
+      parents, I'm super happy!
+  concreteFlaggedWords:
+  - Katie
+  - office
+  - work
+  - firing
+  - HR
   canUseRandomGeneralTweets: 0
   isCeo: 0
   tweetsPerDay: 1

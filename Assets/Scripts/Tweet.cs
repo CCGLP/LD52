@@ -49,7 +49,7 @@ public class Tweet : MonoBehaviour
         }
         for (int i = 0; i<generalWordsBanned.Count; i++)
         {
-            Regex regex = new Regex(generalWordsBanned[i]); 
+            Regex regex = new Regex(generalWordsBanned[i], RegexOptions.IgnoreCase); 
             if (regex.IsMatch(searchableText))
             {
                 return true; 
@@ -57,7 +57,7 @@ public class Tweet : MonoBehaviour
         }
         for (int i = 0; i< user.concreteFlaggedWords.Count; i++)
         {
-            Regex regex = new Regex(user.concreteFlaggedWords[i]);
+            Regex regex = new Regex(user.concreteFlaggedWords[i], RegexOptions.IgnoreCase);
             if (regex.IsMatch(searchableText))
             {
                 return true;

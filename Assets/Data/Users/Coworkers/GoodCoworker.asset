@@ -19,8 +19,32 @@ MonoBehaviour:
   possibleRandomTweets: []
   goodStoryLineTweets:
   - list:
-    - Good good good
-  badStoryLineTweets: []
+    - I'm very happy to see new people around the office, I hope we become friends
+      soon :)
+  - list:
+    - Today I baked cookies for all my colleagues, I hope they liked them!
+    - Being at work brightens my day, returning to home is very depressing.
+  - list:
+    - I heard some nasty rumors today, I hope everything goes well....
+  - list:
+    - Probably joining a union is the best thing to do after what has just happened
+      :(
+  - list:
+    - The atmosphere at work has been very tense lately, I wish everything would
+      go back to the way it used to be.
+  - list:
+    - I love my HR colleagues, they are the only good thing left in the company lately.
+  badStoryLineTweets:
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list:
+    - I can't believe I've been fired, I don't know what I'm going to do now, being
+      at home is messing with my health and things with my partner are not going
+      particularly well.
+  - list:
+    - Going for a job interview today, I hope everything goes well.
   concreteFlaggedWords: []
   canUseRandomGeneralTweets: 0
   isCeo: 0

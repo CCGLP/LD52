@@ -19,9 +19,26 @@ MonoBehaviour:
   possibleRandomTweets: []
   goodStoryLineTweets:
   - list:
-    - Great day today
+    - I can't stand kids these days.
+  - list:
+    - The pandemic has been a set-up organized by the communist government we have
+      in this once glorious country.
+  - list:
+    - It is a pity to see how young people today are becoming more and more sexually
+      perverted.
+    - I keep seeing grown men crying during working hours, I can't understand what
+      goes through their minds to show such a weakness in a work environment.
+  - list:
+    - The communists have infiltrated our company, I think I will communicate this
+      to management.
+  - list:
+    - Scientific articles validating the uselessness of vaccines keep coming out,
+      but people do not want to see beyond what the mass media tells them.
+  - list:
+    - I never understood what the HR department does, it doesn't seem like a real
+      job.
   badStoryLineTweets: []
   concreteFlaggedWords: []
   canUseRandomGeneralTweets: 0
-  isCeo: 0
+  isCeo: 1
   tweetsPerDay: 1

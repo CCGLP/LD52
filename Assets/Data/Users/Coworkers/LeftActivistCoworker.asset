@@ -19,9 +19,47 @@ MonoBehaviour:
   possibleRandomTweets: []
   goodStoryLineTweets:
   - list:
-    - Not happy about things sex
-  badStoryLineTweets: []
-  concreteFlaggedWords: []
+    - Lately the management of my company seems to be taking a worrying shift to
+      the right, I hope it doesn't cause problems for my co-workers.
+  - list:
+    - I don't like seeing how right-wing podcasters are influencing young people
+      today.
+  - list:
+    - I spoke to several co-workers today and the situation is very hairy, I am going
+      to contact my union comrades to see if they can help with this
+  - list:
+    - Today I started talking to my coworkers about how they feel about the current
+      situation, I think it's being like a kind of therapy for all of us
+  - list:
+    - People are starting to join the union, I am very pleased to see that people
+      are starting to take an interest in fighting for their rights, although it
+      bothers me that it took the layoffs to do it.
+  - list:
+    - I am going to talk to the new hires in HR today to discuss their working conditions,
+      I would say they are staying longer than necessary in the office but I want
+      to make sure.
+  badStoryLineTweets:
+  - list: []
+  - list:
+    - Wow, I've been fired. Just another day living in this shitty economic system.
+  - list:
+    - I am trying to look for a job but what I hear about working conditions in the
+      industry depresses me greatly.
+  - list:
+    - Today I had a job interview where the boss confessed to me that they are going
+      to fire one of my future coworkers soon, but they have him on staff because
+      his salary is cheap. I can't stand these people.
+  - list:
+    - At this month's job interview I was offered a salary below minimum wage working
+      12 hours a day. I hate my life
+  - list:
+    - I am thinking of leaving the country to obtain better working conditions. I
+      keep coming across illegal job offers and the government doesn't seem to want
+      to do anything about it.
+  concreteFlaggedWords:
+  - right
+  - therapy
+  - working
   canUseRandomGeneralTweets: 0
   isCeo: 0
   tweetsPerDay: 1

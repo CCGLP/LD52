@@ -18,7 +18,7 @@ public class RealClockTimer : Singleton<RealClockTimer>
 
     void Update()
     {
-        if (timer < 1440)
+        if (timer < 1440 && GameController.Instance.CanUseTimer)
         {
             timer += Time.deltaTime * ClockTimer.Instance.TimeMultiplier;
 

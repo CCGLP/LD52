@@ -16,12 +16,27 @@ MonoBehaviour:
   avatar: {fileID: 21300000, guid: 63540f637e985034ebf358fc08db7be1, type: 3}
   username: Bell Doors
   handle: RealBellDoors
-  possibleRandomTweets: []
-  goodStoryLineTweets:
-  - list:
-    - Another day of new hires in our great business!
-  - list:
-    - Work is great within our great family
+  possibleRandomTweets:
+  - 'Feeling stuck? Go for a walk.
+
+    
+
+    There is no mental block strong enough
+    to outlast the power of a 30-minute walk.'
+  - "Tech has always been about increasing abundance: information, productivity,
+    entertainment, communication, commerce, and more. The big potential of AI is
+    it\u2019s a turbocharger of abundance by eventually lowering the cost and increasing
+    the speed of everything.\r\n"
+  - Do yourself a favor and invest as much time and money in #crypto during this
+    bear market
+  - "There\u2019s a certain feeling that happens when a new technology adjusts your
+    thinking about computing. Google did it. Firefox did it. AWS did it. iPhone did
+    it. OpenAI is doing it with ChatGPT.\r\n"
+  - The only way to escape the Matrix is to unlearn everythng that you have been
+    taught and rebuild your entire belief system based on critical thought & analysis
+  - I cannot understand why employees insist that I pay them on time even though
+    I am on my vacation month.
+  goodStoryLineTweets: []
   badStoryLineTweets: []
   concreteFlaggedWords: []
   canUseRandomGeneralTweets: 0
